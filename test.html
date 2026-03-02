@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 毕业设计</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #status {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 这是你要操作的两个元素 -->
+<h1 id="status">未登录</h1>
+<button id="login-btn">点击登录</button>
+
+<script>
+    // 模拟登录函数 (不用动这个，直接调用)
+    const mockLogin = () => new Promise(r => setTimeout(r, 1000));
+
+    // ==========================================
+    // 👇 请在下面编写你的代码 👇
+    // ==========================================
+
+    // 1. 获取元素 (statusText 和 loginBtn)
+    const statusText = document.querySelector('#status');
+    const loginBtn = document.querySelector('#login-btn');
+
+    // 2. 添加点击事件监听 (注意：回调函数要是 async 的)
+    loginBtn.addEventListener('click',async () => {
+        statusText.textContent = "登录中。。。。";
+        statusText.style.color = "orange";
+        await mockLogin();
+
+        statusText.textContent = "欢迎回来。。。。";
+        statusText.style.color = "green";
+
+    })
+    // 3. 修改文字为 "登录中..."
+
+    // 4. 等待 mockLogin() 结束
+
+    // 5. 修改文字为 "欢迎回来..." 并修改颜色
+
+</script>
+</body>
+</html>

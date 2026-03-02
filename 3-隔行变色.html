@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隔行变色</title>
+    <style>
+        #colorList {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 200px;
+        }
+        #colorList li:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        #colorList li:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <ul id ="colorList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+
+    </ul>
+    
+</body>
+</html>
