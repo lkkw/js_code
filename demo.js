@@ -192,3 +192,8 @@ const sum2 = (a, b) => {
   return a + b;
 };
 console.log(sum2(1, 2));
+
+// 立即执行函数
+(function (a, b) {
+  console.log(a + b);
+})(1, 2);
