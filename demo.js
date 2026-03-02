@@ -186,3 +186,9 @@ const sum1 = function (a, b) {
   return a + b;
 };
 console.log(sum1(1, 2));
+
+// 箭头函数
+const sum2 = (a, b) => {
+  return a + b;
+};
+console.log(sum2(1, 2));
