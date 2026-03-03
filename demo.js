@@ -176,24 +176,54 @@
 // cat.shout(); // 这里会打印出什么？
 
 // 函数声明，会被提升
-console.log(sum(1, 2)); // OK
-function sum(a, b) {
-  return a + b;
+// console.log(sum(1, 2)); // OK
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// // 函数表达式，不会被提升
+// const sum1 = function (a, b) {
+//   return a + b;
+// };
+// console.log(sum1(1, 2));
+
+// // 箭头函数
+// const sum2 = (a, b) => {
+//   return a + b;
+// };
+// console.log(sum2(1, 2));
+
+// // 立即执行函数
+// (function (a, b) {
+//   console.log(a + b);
+// })(1, 2);
+
+
+// const obj = {
+//   name: 'lkk',
+//   say: () => {
+//     console.log(this.name);
+    
+//   }
+// }
+// obj.say();
+
+// console.log(a);
+
+// console.log(typeof a);
+
+
+let person = {
+    name: 'likangkang',
+    age: 25,
+    job: 'student'
 }
 
-// 函数表达式，不会被提升
-const sum1 = function (a, b) {
-  return a + b;
-};
-console.log(sum1(1, 2));
+person.sayHi = function () {
+    console.log(`Hello, my name is ${this.name}`);
+}
 
-// 箭头函数
-const sum2 = (a, b) => {
-  return a + b;
-};
-console.log(sum2(1, 2));
-
-// 立即执行函数
-(function (a, b) {
-  console.log(a + b);
-})(1, 2);
+person.name = 'lkk';
+person.gender = 'male';
+console.log(person);
+person.sayHi();
